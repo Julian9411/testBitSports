@@ -16,7 +16,7 @@ const HomeStack: FC = () => (
     }}>
     <Stack.Screen
       name={routes.HOME}
-      options={{title: 'Home'}}
+      options={{title: 'People of Star Wars'}}
       component={Home}
     />
     <Stack.Screen
