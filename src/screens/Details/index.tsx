@@ -36,21 +36,19 @@ export const Details: FC<IDetails> = ({route}) => {
                   <View
                     key={dataIsArray ? item[0] : item}
                     style={styles.itemContainer}>
-                    <>
-                      <Text
-                        style={[
-                          styles.title,
-                          style.capitalize,
-                          style.colorTitle,
-                        ]}>
-                        {dataIsArray ? item[0].replace('_', ' ') : item}
+                    <Text
+                      style={[
+                        styles.title,
+                        style.capitalize,
+                        style.colorTitle,
+                      ]}>
+                      {dataIsArray ? item[0].replace('_', ' ') : item}
+                    </Text>
+                    {dataIsArray && (
+                      <Text style={[styles.title, style.capitalize]}>
+                        {item[1]}
                       </Text>
-                      {dataIsArray && (
-                        <Text style={[styles.title, style.capitalize]}>
-                          {item[1]}
-                        </Text>
-                      )}
-                    </>
+                    )}
                   </View>
                 );
               })}
